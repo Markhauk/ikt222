@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Recipes>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewBag.Title = "SearchRecipes";
+    var applicationUser = await UserManager.GetUserAsync(User);
+}
+
+<div class="list">
+    @foreach (var recipes in Model)
+    {    <div class="list-item">
+             <div class=" list-item border border-secondary">
+                 <div class="Title list-item text-decoration-underline">@Html.DisplayFor(modelItem => recipes.Title)</div>
+                 <div class="Summary list-item">@Html.DisplayFor(modelItem => recipes.Description)</div>
+                 <div class="Ingredients list-item">@Html.DisplayFor(modelItem => recipes.Ingredients)</div>
+                 <div class="Method list-item">@Html.DisplayFor(modelItem => recipes.Method)</div>
+                 @if (recipes.User == applicationUser)
+                 {
+                     @Html.ActionLink("Edit", "Edit", "MyRecipes", new { id = recipes.Id })
+                 }
+                 @if (recipes.User == applicationUser)
+                 {
+                     @Html.ActionLink("Delete", "Delete", "MyRecipes", new { id = recipes.Id })
+                 }
+             </div>
+             <div class="Nickname text-sm-end">
+                 @Html.DisplayFor(modelItem => recipes.Id)
+             </div>
+         </div>
+    }
+</div>

@@ -1,0 +1,72 @@
+
+
+img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.wrapper{
+    width: 100%;
+    margin-left: 2%;
+}
+
+.left_side{
+    float: left;
+    width: 65%;
+    height: 100%;
+}
+
+.right_side{
+    float: right;
+    width: 35%;
+    height: 100%;
+}
+
+.middle_bottom{
+    padding-bottom: 10%;
+    float: left;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.search_id{
+    color: #b02a37;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+}
+.search_alergi{
+    color: #04AA6D;
+    padding-bottom: 5%;
+
+}
+
+.description{
+    padding-bottom: 5%;
+    width: 70%;
+}
+
+.tutorial_recipe{
+    padding-bottom: 5%;
+    width: 70%;
+}
+.onLineCenter {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 5%;
+    
+}
+.left_box{
+    width: 33%;
+    text-align: center;
+    float: left;
+}
+
+

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Recipes>
+
+<link rel="stylesheet" href="~/css/oppskrift.css" asp-append-version="true" />
+
+@{
+    ViewBag.Title = "Oppskrifter";
+    Layout = "_Layout";
+}
+
+  <partial name="_SearchPartial"/>
+
+<div class="wrapper">
+    <h2>Oppskrifter</h2>
+    @foreach (var recipes in Model)
+            {
+                <a asp-action="ViewRecipe" asp-route-id="@recipes.Id">
+        
+                <div class="recepie_box">
+                    <h3>@recipes.Title</h3>
+                    <h3>@recipes.TimeToMake</h3>
+                    <h3>@recipes.Difficulty</h3>
+                </div>
+                </a>
+            }
+</div>

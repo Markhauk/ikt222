@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Recipes>  
+@{ 
+    ViewData["Title"] = "Home Page"; 
+} 
+
+   <partial name="_SearchPartial"/>
+ 
+<!-- Test Bootstrap Card --> 
+<!-- 
+<div class="card" style="width: 18rem;"> 
+    <img class="card-img-top" src="..." alt="Card image cap"> 
+    <div class="card-body"> 
+        <p class="card-text"></p> 
+        <a href="#" class="btn btn-primary">Go to recipe</a> 
+    </div> 
+</div> 
+--> 
+ 
+<head> 
+    <title> 
+        frontpage 
+    </title> 
+    <link rel="stylesheet" href="css/frontPage.css"> 
+</head> 
+<body> 
+<div class="carousel"> 
+    @foreach (var recipe in Model) 
+    {
+        <div class="carousel__item">@recipe.Title</div> 
+    } 
+</div> 
+</body>

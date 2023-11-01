@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-foodbyte-8C573EEE-069B-4895-B494-4FE725DF8517</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.8" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.8" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+        <PackageReference Include="Npgsql" Version="6.0.7" />
+        <PackageReference Include="SendGrid" Version="9.27.0" />
+        <PackageReference Include="SendGrid.Extensions.DependencyInjection" Version="1.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Shared\_LoginPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Shared\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\bin\Debug\net6.0\WebPWrecover.deps.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\bin\Debug\net6.0\WebPWrecover.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\bin\Debug\net6.0\WebPWrecover.staticwebassets.runtime.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\obj\Debug\net6.0\staticwebassets.build.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\obj\Debug\net6.0\staticwebassets.development.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\obj\WebPWrecover.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Properties\launchSettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\userdata\userid" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\img" />
+    </ItemGroup>
+
+</Project>

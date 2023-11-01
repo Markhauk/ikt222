@@ -1,0 +1,118 @@
+.header-container{
+    margin-top:20px;
+}
+
+
+
+@media (min-width: 992px){
+    .container, .container-fluid {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+.profileImg {
+    width: 140px ;
+    height: auto;
+    object-fit:cover;
+}
+
+.Edit-user {
+    margin-left: 5%;
+    border: 1px solid black;
+    padding: 0.5% 2%;
+    border-radius: 5%;
+    transition: 1s ease;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.Edit-user, a {
+
+    color: black;
+    text-decoration: none;
+}
+.Edit-user:hover {
+    background-color: lightgrey;
+    color: black;
+    transition: 1s ease;
+
+}
+
+.lite-bilde {
+    width: 30px ;
+    height: auto;
+    object-fit:cover;
+}
+
+.font-weight-bold {
+    font-weight: 700 ;
+}
+
+.smoinfo {
+    padding-bottom: 3%;
+}
+
+.nav-link.active, .tabs-alt .nav-tabs {
+    box-shadow: 0 1px 0 black inset;
+    border-width: 0 ;
+    border-radius: 0 ;
+    background-color: transparent ;
+}
+
+.nav-tabs.tabs-alt .nav-link {
+    border-width: 0 ;
+    border-radius: 0 ;
+    background-color: transparent ;
+
+}
+
+
+
+
+
+.form{
+    border-radius: 40px;
+    margin: 0 500px;
+    margin-bottom: 100px;
+
+}
+.input{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.message{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    height: 100px;
+    text-align: left;
+    alignment: center;
+}
+.button{
+    border-radius: 10px;
+    border: #0c63e4;
+    background-color: #0c63e4;
+    color: whitesmoke;
+    margin: auto;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+}
+.list{
+    margin: 0 300px;
+    display: flex;
+    flex-direction: column;
+}
+.list-item{
+    text-align: center;
+    border-radius: 40px;
+    margin: 10px 0;
+    padding: 5px;
+}

@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Recipes>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewBag.Title = "MyRecipes";
+    var applicationUser = await UserManager.GetUserAsync(User);
+}
+
+
+<div class="container bootstrap-snippet header-container">
+    <div class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    @if (UserManager.GetUserAsync(User).Result.ProfilePicture != null)
+                    {
+                        <img class="profileImg rounded-circle" src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))" alt="Image not found">
+                    }
+                </div>
+                <div class="col-sm-10">
+                    <div class="media-body col-ml-5">
+                        <h4 class="mb-4">@UserManager.GetUserAsync(User).Result.Nickname 
+                            <a class="Edit-user" asp-area="Identity" asp-page="/Account/Manage/Index">Rediger profil</a>
+                            <a asp-area="Identity" asp-page="/Account/Manage/Index">                                
+                                <img src="images\tannhjul.png" class="lite-bilde rounded-circle" alt="bilde">
+                            </a>
+                        </h4>
+                    </div>
+                    <p class="d-inline-block text-dark ml-3">
+                        <strong>234 &nbsp;</strong>
+                        <span class="text-muted">Innlegg &nbsp; &nbsp;</span>
+                
+
+                        <strong>Poengener her &nbsp;</strong>
+                        <span class="text-muted">Poeng</span>
+                    </p>
+                    <div class="smoinfo text-muted mb-4">
+                        Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam. Ad harum primis electram duo, porro principes ei has.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    </div>
+    <hr class="m-0">
+    <ul class="nav nav-tabs tabs-alt justify-content-center">
+        <li class="nav-item nav-link active">
+        <svg aria-label="" class="_ab6-" color="#262626" fill="#262626" height="12" role="img" viewBox="0 0 24 24" width="12">
+            <rect fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="18" x="3" y="3"></rect>
+            <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="9.015" x2="9.015" y1="3" y2="21"></line>
+            <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="14.985" x2="14.985" y1="3" y2="21"></line>
+            <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="21" x2="3" y1="9.015" y2="9.015"></line>
+            <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="21" x2="3" y1="14.985" y2="14.985"></line>
+        </svg>
+        <a class=" py-4 " href="#">Posts</a>
+        <li class="nav-item nav-link active">
+            <a class="py-4" asp-area="" asp-controller="MyRecipes" asp-action="Add">Add a recepie</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="list">
+    @foreach (var recipes in Model)
+    {    <div class="list-item">
+             <div class=" list-item border border-secondary">
+                 <div class="Title list-item text-decoration-underline">@Html.DisplayFor(modelItem => recipes.Title)</div>
+                 <div class="Summary list-item">@Html.DisplayFor(modelItem => recipes.Description)</div>
+                 <div class="Ingredients list-item">@Html.DisplayFor(modelItem => recipes.Ingredients)</div>
+                 <div class="Method list-item">@Html.DisplayFor(modelItem => recipes.Method)</div>
+                 @if (recipes.User == applicationUser)
+                 {
+                     @Html.ActionLink("Add", "Add", "MyRecipes", new { id = recipes.Id })
+                 }
+                 {
+                     @Html.ActionLink("Edit", "Edit", "MyRecipes", new { id = recipes.Id })
+                 }
+                 @if (recipes.User == applicationUser)
+                  {
+                      @Html.ActionLink("Delete", "Delete", "MyRecipes", new { id = recipes.Id })
+                  }
+             </div>
+             <div class="Nickname text-sm-end">
+                 @Html.DisplayFor(modelItem => recipes.Id)
+             </div>
+         </div>
+    }
+</div>  

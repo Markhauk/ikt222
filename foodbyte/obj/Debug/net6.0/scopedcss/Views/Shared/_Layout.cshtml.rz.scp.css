@@ -1,0 +1,93 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-y5fgrp4nev] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-y5fgrp4nev] {
+  color: #0077cc;
+}
+
+.btn-primary[b-y5fgrp4nev] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-y5fgrp4nev], .nav-pills .show > .nav-link[b-y5fgrp4nev] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-y5fgrp4nev] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-y5fgrp4nev] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-y5fgrp4nev] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-y5fgrp4nev] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-y5fgrp4nev] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+
+
+/*Dropdown-menu left side*/
+.dropbtn[b-y5fgrp4nev] {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  transition: 2s ease;
+}
+
+.dropdown[b-y5fgrp4nev] {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content[b-y5fgrp4nev] {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 9rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a[b-y5fgrp4nev] {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover[b-y5fgrp4nev] {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content[b-y5fgrp4nev] {display: block;}
+
+.dropdown:hover .dropbtn[b-y5fgrp4nev] {
+  background-color: dimgrey;
+  transition: 2s ease;
+}
+
+.dropdown-content.active[b-y5fgrp4nev] {
+  background-color: dimgrey;
+}

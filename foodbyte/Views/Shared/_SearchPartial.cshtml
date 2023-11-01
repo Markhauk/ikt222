@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Recipes>
+
+@{
+    ViewData["_SearchPartial"] = "Index";
+}
+
+<form asp-controller="Home" asp-action="Search" method="get">
+    <p>
+        <input type="text" name="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>

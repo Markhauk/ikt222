@@ -1,0 +1,32 @@
+﻿
+/*Oppskrift siden for alle oppskriftene*/
+
+.wrapper{
+    width: 100%;
+    margin-left: 2%;
+}
+
+.recepie_box {
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+    margin-right: auto;
+    margin-top: 2%;
+    border-top: 2px solid #3b3b3b;
+    box-shadow: 0px 0px 10px 5px #3b3b3b;
+    padding-bottom: 5%;
+    background-color: dimgrey ;
+    box-shadow: 0px 0px 10px 5px #3b3b3b;
+    display: block;
+    opacity: 0.4;
+    transition: 1s ease;
+
+}
+
+
+.recepie_box:hover {
+    opacity: 1;
+    transition: 1s ease;
+    color: transparent;
+
+}

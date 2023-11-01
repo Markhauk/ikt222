@@ -1,0 +1,66 @@
+﻿<link rel="stylesheet" href="~/css/wheelSpin.css" asp-append-version="true" />
+
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2 class="text-center border-bottom shadow-sm">Spin hjulet, vips der har du middagen din!!</h2>
+
+<div class="container-fluid">
+	
+	<form class="checkbox">
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+			<label class="form-check-label" for="check1">Option 1</label>
+		</div>
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+			<label class="form-check-label" for="check2">Option 2</label>
+		</div>
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" disabled>
+			<label class="form-check-label">Option 3</label>
+		</div>
+		
+			<div class="skjera">
+        		<p id="arrPrint"></p>
+        	</div>
+	</form>
+	
+
+	
+	<div id="mainbox" class="mainbox">
+		<div id="box" class="box">
+	
+			<div class="box1">
+				<span class="span1"></span>
+				<span class="span2"></span>
+				<span class="span3"></span>
+				<span class="span4"></span>
+			</div>
+			<div class="box2">
+				<span class="span1"></span>
+				<span class="span2"></span>
+				<span class="span3"></span>
+				<span class="span4"></span>
+			</div>
+			
+		</div>
+		<a class="spin" onclick="myfunction()" asp-area="" asp-controller="WheelSpinn" asp-action="ViewRecipe">SPINN</a>
+		
+	</div>
+
+	<div class="spinner-border text-secondary" style="display:none"></div>
+
+</div>
+
+
+<br>
+
+
+
+
+<script src="~/js/wheelSpin.js" asp-append-version="true"></script>
+
