@@ -27,6 +27,7 @@
                 Beskrivelse av rett
             </h2>
             <p>
+                <!-- Intentionally introduced an XSS vulnerability  -->
                 @Html.Raw(Model.Description)
             </p>
         </div>
