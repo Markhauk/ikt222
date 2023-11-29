@@ -28,6 +28,15 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Lockout.AllowedForNewUsers = true;
 });
 
+// Add Authentication service for Google OAuth 2.0
+var configuration = builder.Configuration;
+builder.Services.AddAuthentication().AddGoogle(googleOptions =>
+{
+    googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
+    googleOptions.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+});
+
+
 var app = builder.Build();
 
 //call the database initializer
