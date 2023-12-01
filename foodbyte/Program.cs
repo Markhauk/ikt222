@@ -32,8 +32,13 @@ builder.Services.Configure<IdentityOptions>(options =>
 var configuration = builder.Configuration;
 builder.Services.AddAuthentication().AddGoogle(googleOptions =>
 {
-    googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
-    googleOptions.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+    //googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
+    googleOptions.ClientId = Environment.GetEnvironmentVariable("CLIENT_ID");
+    
+    //googleOptions.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+    googleOptions.ClientSecret = Environment.GetEnvironmentVariable("CLIENT_SECRET");
+    
+    googleOptions.CorrelationCookie.SameSite = SameSiteMode.Unspecified;
 });
 
 
